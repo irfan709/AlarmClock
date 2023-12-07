@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddOrUpdateAlarmFragment">
+
+
+    <EditText
+        android:id="@+id/alarmtitleet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Title"
+        android:minHeight="48dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp" />
+
+    <TextView
+        android:id="@+id/alarmtimetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textSize="30sp"
+        android:fontFamily="@font/google_sans_bold"
+        android:layout_marginTop="10dp" />
+
+    <TimePicker
+        android:id="@+id/timepickerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:timePickerMode="spinner" />
+
+
+    <TextView
+        android:id="@+id/repeattext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat alarm for:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp" />
+
+    <CheckBox
+        android:id="@+id/recurringcheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Recurring Alarm"
+        android:layout_marginTop="15sp"
+        android:padding="10dp"/>
+
+    <HorizontalScrollView
+        android:id="@+id/recurringoptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:id="@+id/mondaycheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Mon"
+                android:textSize="15sp"
+                android:fontFamily="@font/google_sans_bold"
+                android:padding="5dp"
+                android:minHeight="48dp"/>
+
+            <CheckBox
+                android:id="@+id/tuesdaycheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Tue"
+                android:textSize="15sp"
+                android:fontFamily="@font/google_sans_bold"
+                android:padding="5dp"
+                android:minHeight="48dp"/>
+
+            <CheckBox
+                android:id="@+id/wednesdaycheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Wed"
+                android:textSize="15sp"
+                android:fontFamily="@font/google_sans_bold"
+                android:padding="5dp"
+                android:minHeight="48dp"/>
+
+
+            <CheckBox
+                android:id="@+id/thursdaycheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Thu"
+                android:textSize="15sp"
+                android:fontFamily="@font/google_sans_bold"
+                android:padding="5dp"
+                android:minHeight="48dp"/>
+
+
+            <CheckBox
+                android:id="@+id/fridaycheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Fri"
+                android:textSize="15sp"
+                android:fontFamily="@font/google_sans_bold"
+                android:padding="5dp"
+                android:minHeight="48dp"/>
+
+
+            <CheckBox
+                android:id="@+id/saturdaycheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Sat"
+                android:textSize="15sp"
+                android:fontFamily="@font/google_sans_bold"
+                android:padding="5dp"
+                android:minHeight="48dp"/>
+
+
+            <CheckBox
+                android:id="@+id/sundaycheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Sun"
+                android:textSize="15sp"
+                android:fontFamily="@font/google_sans_bold"
+                android:padding="5dp"
+                android:minHeight="48dp"/>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/selectsonglayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/songtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click here to choose alarm tone"
+            android:textSize="17sp"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/songnametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="15sp"
+            android:fontFamily="@font/google_sans_bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp" />
+
+        <TextView
+            android:id="@+id/songresourcetv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="15sp"
+            android:fontFamily="@font/google_sans_bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/vibratelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp">
+
+        <ImageView
+            android:id="@+id/vibrateimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_vibration_24"
+            android:layout_marginStart="10dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vibrate"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/vibrateimg"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp" />
+
+        <Switch
+            android:id="@+id/vibrateswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:minHeight="48dp"
+            android:trackTint="@android:color/holo_blue_dark" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/setalarmbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Set Alarm"
+        android:textSize="20sp"
+        android:backgroundTint="#eb5e28" />
+
+
+</LinearLayout>

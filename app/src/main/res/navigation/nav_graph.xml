@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.alarmclock.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_alarmsListFragment"
+            app:destination="@id/alarmsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alarmsListFragment"
+        android:name="com.example.alarmclock.fragments.AlarmsListFragment"
+        android:label="fragment_alarms_list"
+        tools:layout="@layout/fragment_alarms_list" >
+        <action
+            android:id="@+id/action_alarmsListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_alarmsListFragment_to_addOrUpdateAlarmFragment"
+            app:destination="@id/addOrUpdateAlarmFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addOrUpdateAlarmFragment"
+        android:name="com.example.alarmclock.fragments.AddOrUpdateAlarmFragment"
+        android:label="fragment_add_or_update_alarm"
+        tools:layout="@layout/fragment_add_or_update_alarm" >
+        <action
+            android:id="@+id/action_addOrUpdateAlarmFragment_to_alarmsListFragment"
+            app:destination="@id/alarmsListFragment" />
+        <action
+            android:id="@+id/action_addOrUpdateAlarmFragment_to_songsFragment"
+            app:destination="@id/songsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/songsFragment"
+        android:name="com.example.alarmclock.fragments.SongsFragment"
+        android:label="fragment_songs"
+        tools:layout="@layout/fragment_songs" >
+        <action
+            android:id="@+id/action_songsFragment_to_addOrUpdateAlarmFragment"
+            app:destination="@id/addOrUpdateAlarmFragment" />
+
+    </fragment>
+</navigation>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Alarm Clock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="alarm_title">My Alarm</string>
+    <string name="alarm_object">AlarmObject</string>
+    <string name="bundle_alarm_object">AlarmBundle</string>
+
+</resources>
